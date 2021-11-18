@@ -20,7 +20,7 @@ const Nav: FC = () => {
         onClick={() => setNavOpened(false)}
       />
     ));
-  }, [CATAGORIES]);
+  }, []);
 
   useEffect(() => {
     if (navOpened) {

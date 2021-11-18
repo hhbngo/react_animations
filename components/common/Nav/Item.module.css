@@ -3,14 +3,20 @@
 }
 
 .label {
-  @apply cursor-pointer
- hover:bg-gray-100 p-2 rounded-md text-lg font-medium capitalize;
+  @apply p-2 rounded-md
+  hover:bg-gray-100 
+  text-lg font-medium capitalize
+  cursor-pointer;
 }
 
 .links {
-  @apply overflow-y-hidden transition-all duration-300 px-3 pr-0 text-gray-500;
+  @apply px-3 pr-0 overflow-y-hidden 
+ text-gray-500
+ transition-all duration-300;
 }
 
 .links > a {
-  @apply block  hover:bg-gray-50 py-1 px-2 rounded-md capitalize;
+  @apply block px-2 py-1 rounded-md 
+  hover:bg-gray-50
+  capitalize;
 }
