@@ -1,0 +1,16 @@
+.container {
+  @apply w-full;
+}
+
+.label {
+  @apply cursor-pointer
+ hover:bg-gray-100 p-2 rounded-md text-lg font-medium capitalize;
+}
+
+.links {
+  @apply overflow-y-hidden transition-all duration-300 px-3 pr-0 text-gray-500;
+}
+
+.links > a {
+  @apply block  hover:bg-gray-50 py-1 px-2 rounded-md capitalize;
+}

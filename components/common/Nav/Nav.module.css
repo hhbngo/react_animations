@@ -1,0 +1,39 @@
+.container {
+  @apply p-4 pb-0 md:p-5 md:w-80 w-full pr-2;
+}
+
+.container h1 {
+  @apply text-3xl mb-4 font-bold text-indigo-400 leading-9;
+}
+
+.menu_btn {
+  @apply absolute top-3 right-3 w-12 h-12 bg-purple-400 md:hidden cursor-pointer rounded-lg p-3
+  flex flex-col justify-between;
+}
+
+.line {
+  @apply w-full bg-white h-1 rounded-sm;
+}
+
+.l_wrapper {
+  @apply overflow-y-auto md:w-full md:pr-1 md:block hidden md:static absolute top-0 left-0 bg-white w-9/12 shadow-md md:shadow-none rounded-lg rounded-t-none z-20;
+  max-height: 88%;
+}
+
+.backdrop {
+  @apply absolute top-0 left-0 w-full h-screen z-10 hidden bg-black bg-opacity-60;
+}
+
+.active {
+  @apply block;
+}
+
+.l_wrapper::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+  background-color: white;
+}
+
+.l_wrapper::-webkit-scrollbar-thumb {
+  @apply p-4 rounded-xl bg-green-300;
+}

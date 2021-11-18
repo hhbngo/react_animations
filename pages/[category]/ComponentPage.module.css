@@ -1,0 +1,27 @@
+.container {
+  @apply h-full w-full overflow-y-auto;
+}
+
+.container h1 {
+  @apply capitalize;
+}
+
+.container h1 > span {
+  @apply lowercase text-gray-500;
+}
+
+.component_showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'spinner';
+  place-items: center center;
+  @apply py-6 my-12;
+}
+
+.code_section {
+  @apply font-mono;
+}
+
+.code_section h2 {
+  @apply mb-1 text-xl text-purple-400;
+}
