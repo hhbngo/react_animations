@@ -1,10 +1,11 @@
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 import { spinner } from './loaders';
 
 interface Data {
   [key: string]: {
     [key: string]: {
       component: FC;
+      containerStyles?: CSSProperties;
       code: string;
       css: string;
     };

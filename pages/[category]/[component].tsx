@@ -41,7 +41,12 @@ export default function ComponentPage({
   category,
   componentName,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { component: Component, code, css } = DATA[category][componentName];
+  const {
+    component: Component,
+    containerStyles = {},
+    code,
+    css,
+  } = DATA[category][componentName];
 
   return (
     <div className={c.container}>
@@ -49,7 +54,9 @@ export default function ComponentPage({
         {category} / <span>{componentName}</span>
       </h1>
       <div className={c.component_showcase}>
-        <Component />
+        <div style={{ ...containerStyles }}>
+          <Component />
+        </div>
       </div>
       <div className={c.code_section}>
         <h2>Code</h2>
