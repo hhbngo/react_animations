@@ -1,10 +1,11 @@
 import { CSSProperties, FC } from 'react';
 import { spinner } from './loaders';
+import { flip } from './cards';
 
 interface Data {
   [key: string]: {
     [key: string]: {
-      component: FC;
+      component: FC<any>;
       containerStyles?: CSSProperties;
       code: string;
       css: string;
@@ -15,6 +16,9 @@ interface Data {
 export const DATA: Data = {
   loaders: {
     spinner,
+  },
+  cards: {
+    flip,
   },
 };
 

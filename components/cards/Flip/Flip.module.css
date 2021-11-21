@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.wrapper {
+  @apply relative
+  w-full h-full;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  @apply absolute
+  w-full h-full;
+  backface-visibility: hidden;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.container:hover .wrapper {
+  transform: rotateY(180deg);
+}

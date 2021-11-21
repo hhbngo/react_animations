@@ -6,6 +6,8 @@ import {
 import c from './ComponentPage.module.css';
 import { CATAGORIES, DATA } from '@constants';
 import { CopyBlock, dracula } from 'react-code-blocks';
+import { useRouter } from 'next/dist/client/router';
+import { useEffect, useRef } from 'react';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = CATAGORIES.map((c) =>
@@ -48,8 +50,25 @@ export default function ComponentPage({
     css,
   } = DATA[category][componentName];
 
+  const ref = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handlePageChange = () => {
+      if (ref.current) {
+        ref.current.scrollTo(0, 0);
+      }
+    };
+
+    router.events.on('routeChangeComplete', handlePageChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handlePageChange);
+    };
+  }, []);
+
   return (
-    <div className={c.container}>
+    <div className={c.container} ref={ref}>
       <h1>
         {category} / <span>{componentName}</span>
       </h1>
@@ -67,7 +86,10 @@ export default function ComponentPage({
           theme={dracula}
         />
         <br />
-        <h2>CSS</h2>
+        <h2>
+          {componentName.charAt(0).toUpperCase() + componentName.slice(1)}
+          .module.css
+        </h2>
         <CopyBlock
           text={css}
           language="css"

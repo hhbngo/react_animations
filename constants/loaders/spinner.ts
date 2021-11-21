@@ -13,16 +13,9 @@ export default {
   height: 11em;
   border-radius: 50%;
   background: #000000;
-  background: -moz-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 42%);
-  background: -webkit-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 42%);
-  background: -o-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 42%);
-  background: -ms-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 42%);
   background: linear-gradient(to right, #000000 10%, rgba(0, 0, 0, 0) 42%);
   position: relative;
-  -webkit-animation: load3 1.4s infinite linear;
   animation: load3 1.4s infinite linear;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
     
