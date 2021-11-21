@@ -49,7 +49,6 @@ ReactDOM.render(
   height: 100%;
   backface-visibility: hidden;
   overflow: hidden;
-  padding: 6px;
 }
 
 .back {
