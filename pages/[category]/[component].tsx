@@ -55,9 +55,7 @@ export default function ComponentPage({
 
   useEffect(() => {
     const handlePageChange = () => {
-      if (ref.current) {
-        ref.current.scrollTo(0, 0);
-      }
+      ref.current && ref.current.scrollTo(0, 0);
     };
 
     router.events.on('routeChangeComplete', handlePageChange);
