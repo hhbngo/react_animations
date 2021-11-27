@@ -16,7 +16,7 @@
   grid-template-columns: 1fr;
   grid-template-areas: 'spinner';
   place-items: center center;
-  @apply py-6 mt-8 mb-12;
+  @apply py-6 my-12;
 }
 
 .code_section {
