@@ -1,0 +1,33 @@
+.btn {
+  @apply relative 
+  px-8 py-3 border-0 rounded-md
+  bg-gray-100
+  cursor-pointer shadow-md overflow-hidden;
+}
+
+.btn span {
+  position: relative;
+  z-index: 2;
+  color: rgb(56, 56, 56);
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.btn .bg {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  @apply bg-pink-300;
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.btn:hover span {
+  color: white;
+}
+
+.btn:hover .bg {
+  transform: scale(35);
+}

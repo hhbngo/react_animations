@@ -1,0 +1,31 @@
+.btn {
+  @apply relative 
+  px-5 py-3 border-0 rounded-md
+  bg-gray-100
+  cursor-pointer shadow-md overflow-hidden;
+}
+
+.btn span {
+  position: relative;
+  z-index: 2;
+  color: rgb(56, 56, 56);
+  font-size: 24px;
+  transition: color 0.25s;
+}
+
+.btn::after {
+  @apply absolute top-0 -left-full
+  h-full w-full
+  bg-indigo-300;
+  content: '';
+  transition: transform 0.25s ease-in-out;
+  z-index: 1;
+}
+
+.btn:hover::after {
+  transform: translateX(100%);
+}
+
+.btn:hover span {
+  color: white;
+}

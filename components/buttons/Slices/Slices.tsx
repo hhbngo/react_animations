@@ -1,16 +1,16 @@
 import { FC } from 'react';
-import c from './LeftToRight.module.css';
+import c from './Slices.module.css';
 
 interface Props {
   onClick?: () => void;
 }
 
-const LeftToRight: FC<Props> = ({ children, onClick }) => {
+const Slices: FC<Props> = ({ children, onClick }) => {
   return (
     <button className={c.btn} onClick={onClick ? onClick : () => {}}>
-      <span>Left To Right</span>
+      <span>Slices</span>
     </button>
   );
 };
 
-export default LeftToRight;
+export default Slices;

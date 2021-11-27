@@ -1,6 +1,7 @@
 import { CSSProperties, FC } from 'react';
 import { spinner } from './loaders';
 import { flip } from './cards';
+import { leftToRight, slices, bubble } from './buttons';
 
 interface Data {
   [key: string]: {
@@ -16,6 +17,11 @@ interface Data {
 export const DATA: Data = {
   loaders: {
     spinner,
+  },
+  buttons: {
+    leftToRight,
+    slices,
+    bubble,
   },
   cards: {
     flip,
