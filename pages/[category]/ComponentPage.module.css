@@ -8,7 +8,7 @@
 
 .container h1 > span {
   @apply text-gray-500
-  lowercase;
+  capitalize;
 }
 
 .component_showcase {
