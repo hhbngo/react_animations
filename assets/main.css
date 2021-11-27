@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-purple-200;
+  @apply md:pt-16
+  bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400 h-screen;
 }

@@ -1,7 +1,7 @@
 .container {
-  @apply flex flex-col md:flex-row w-full mx-auto md:mt-16 rounded-t-none md:rounded-xl 
+  @apply flex flex-col md:flex-row w-full mx-auto rounded-t-none md:rounded-xl 
   bg-white
-  shadow-md;
+  shadow-lg;
 
   max-width: 1100px;
 }
