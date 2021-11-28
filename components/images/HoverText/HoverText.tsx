@@ -17,7 +17,7 @@ const HoverText: FC<Props> = ({ src, text, textOffset = 0 }) => {
           Candy canes, gummi bears, icing, and marshmallows.
         </p>
       </div>
-      <Image src={Fox} />
+      <Image src={Fox} alt="" />
     </div>
   );
 };
