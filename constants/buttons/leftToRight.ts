@@ -5,6 +5,12 @@ export default {
   camelName: 'LeftToRight',
   code: `import c from './LeftToRight.module.css';
 
+/**
+ PROP-TYPES
+  children: ReactNode;
+  onClick?: () => any; (optional)
+**/
+
 const LeftToRight = ({ children, onClick }) => {
   return (
     <button className={c.btn} onClick={onClick ? onClick : () => {}}>

@@ -5,6 +5,12 @@ export default {
   code: `import { useState } from 'react';
  import c from './Bubble.module.css';
 
+/**
+ PROP-TYPES
+  children: ReactNode;
+  onClick?: () => any; (optional)
+**/
+
 const Bubble = ({ children, onClick }) => {
   const [{ x, y }, setCoords] = useState({ x: 0, y: 0 });
 
@@ -20,7 +26,7 @@ const Bubble = ({ children, onClick }) => {
       onClick={onClick ? onClick : () => {}}
       onMouseEnter={handleHover}
     >
-      <span>Bubble</span>
+      <span>{children}</span>
       <span className={c.bg} style={{ top: y, left: x }}></span>
     </button>
   );

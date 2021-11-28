@@ -4,6 +4,12 @@ export default {
   component: Slices,
   code: `import c from './Slices.module.css';
 
+/**
+ PROP-TYPES
+  children: ReactNode;
+  onClick?: () => any; (optional)
+**/
+
 const Slices = ({ children, onClick }) => {
   return (
     <button className={c.btn} onClick={onClick ? onClick : () => {}}>

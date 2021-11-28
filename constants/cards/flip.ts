@@ -5,14 +5,19 @@ export default {
   containerStyles: { width: '128px', height: '192px' },
   code: `import c from './Flip.module.css';
 
+/**
+ PROP-TYPES
+  front: ReactNode;
+  back: ReactNode;
+  ! 'front' and 'back' container width should be 100%
+**/  
+
 const Flip = ({ front, back }) => {
   return (
     <div className={c.container}>
       <div className={c.wrapper}>
         <div className={c.front}>{front}</div>
         <div className={c.back}>{back}</div>
-        {/* 'front' and 'back' props are ReactNodes; e.g. <PlayingCard /> */}
-        {/* Their containers should be fluid (width: 100%; height: 100%) */} 
       </div>
     </div>
   )

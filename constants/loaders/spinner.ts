@@ -2,9 +2,18 @@ import { Spinner } from '@components/loaders';
 
 export default {
   component: Spinner,
-  code: `const Spinner = () => {
-    return <div className={spinner}></div>
-}`,
+  code: `import c from './Spinner.module.css';
+
+const Spinner = () => {
+  return <div className={c.spinner}></div>
+};
+
+ReactDOM.render(
+  <Spinner/>,
+  document.getElementById('root')
+);
+
+`,
   css: `.spinner {
   grid-area: spinner;
   font-size: 4px;
