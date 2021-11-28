@@ -23,9 +23,9 @@
 
 .l_wrapper {
   @apply absolute md:static top-0 left-0 z-20
-  hidden md:block w-9/12 md:w-full md:pr-1 rounded-lg rounded-t-none 
+  hidden md:block w-9/12 md:w-full md:pr-1 pb-3 md:pb-0 pl-1 md:pl-0 rounded-lg rounded-t-none 
   bg-white
-  shadow-md md:shadow-none;
+  shadow-md md:shadow-none overflow-y-auto;
   max-height: 80vh;
 }
 
