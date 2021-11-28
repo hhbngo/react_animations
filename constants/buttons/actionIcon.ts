@@ -45,6 +45,7 @@ ReactDOM.render(
   justify-content: center;
   align-items: center;
   opacity: 0;
+  pointer-events: none;
   transition: transform 0.35s, opacity 0.25s;
 }
 
