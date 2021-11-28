@@ -2,6 +2,7 @@ import { CSSProperties, FC } from 'react';
 import { spinner } from './loaders';
 import { flip } from './cards';
 import { leftToRight, slices, bubble, actionIcon } from './buttons';
+import { zoomIn, zoomOut, hoverText } from './images';
 
 interface Data {
   [key: string]: {
@@ -23,6 +24,11 @@ export const DATA: Data = {
     actionIcon,
     slices,
     bubble,
+  },
+  images: {
+    zoomIn,
+    zoomOut,
+    hoverText,
   },
   cards: {
     flip,
