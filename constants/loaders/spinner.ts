@@ -4,76 +4,64 @@ export default {
   component: Spinner,
   code: `import c from './Spinner.module.css';
 
-const Spinner = () => {
-  return <div className={c.spinner}></div>
+/** 
+ PROP-TYPES
+  size?: 'sm' | 'md' | 'lg'; (optional)
+  thickness?: 'thin' | 'normal' | 'thick'; (optional)
+  color?: string; (optional)
+**/
+
+const Spinner = ({
+  size = 'md',
+  thickness = 'normal',
+  color = 'black'
+}) => {
+  const spinnerStyles = {
+    ...S_PRESETS[size],
+    ...T_PRESETS[thickness],
+    borderStyle: 'solid',
+    borderColor: 'rgb(241, 241, 241)',
+    borderTopColor: color,
+  };
+
+  return <div className={c.spinner} style={spinnerStyles}></div>;
+};
+
+const S_PRESETS = {
+  sm: { width: 34, height: 34 },
+  md: { width: 42, height: 42 },
+  lg: { width: 50, height: 50 },
+};
+
+const T_PRESETS = {
+  thin: { borderWidth: 2 },
+  normal: { borderWidth: 4 },
+  thick: { borderWidth: 6 },
 };
 
 ReactDOM.render(
-  <Spinner/>,
+  <Spinner
+    color: 'rgb(0, 0, 0)'
+  />,
   document.getElementById('root')
 );
-
 `,
   css: `.spinner {
-  grid-area: spinner;
-  font-size: 4px;
-  text-indent: -9999em;
-  width: 11em;
-  height: 11em;
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgb(241, 241, 241);
+  border-top: 2px solid black;
   border-radius: 50%;
-  background: #000000;
-  background: linear-gradient(to right, #000000 10%, rgba(0, 0, 0, 0) 42%);
-  position: relative;
-  animation: load3 1.4s infinite linear;
-  transform: translateZ(0);
+  animation: spin 1s linear infinite;
 }
     
-.spinner:before {
-  width: 50%;
-  height: 50%;
-  background: #000000;
-  border-radius: 100% 0 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-}
-    
-.spinner:after {
-  background: white;
-  width: 75%;
-  height: 75%;
-  border-radius: 50%;
-  content: '';
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-    
-@-webkit-keyframes load3 {
+@keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
-    
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-    
-@keyframes load3 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-    
-  100% {
-    -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-  }
-}`,
+`,
 };
