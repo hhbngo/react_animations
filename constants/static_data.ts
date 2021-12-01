@@ -1,5 +1,5 @@
 import { CSSProperties, FC } from 'react';
-import { spinner } from './loaders';
+import { spinner, dots, wave } from './loaders';
 import { flip } from './cards';
 import { leftToRight, slices, bubble, actionIcon } from './buttons';
 import { zoomIn, zoomOut, hoverText } from './images';
@@ -18,6 +18,8 @@ interface Data {
 export const DATA: Data = {
   loaders: {
     spinner,
+    dots,
+    wave,
   },
   buttons: {
     leftToRight,
