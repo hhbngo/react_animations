@@ -3,6 +3,7 @@ import { spinner, dots, wave } from './loaders';
 import { flip } from './cards';
 import { leftToRight, slices, bubble, actionIcon } from './buttons';
 import { zoomIn, zoomOut, hoverText } from './images';
+import { progress } from './misc';
 
 interface Data {
   [key: string]: {
@@ -32,7 +33,8 @@ export const DATA: Data = {
     zoomOut,
     hoverText,
   },
-  cards: {
+  misc: {
+    progress,
     flip,
   },
 };
