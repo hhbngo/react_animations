@@ -31,7 +31,7 @@ const ZoomOut = ({ src, alt = "image" }) => {
 ReactDOM.render(
   <div style={{ width: 200, height: 200 }}>
     <ZoomOut
-      src="https://www.hosting_site.com/fatty_corgi.jpg"
+      src="https://www.hosting-site.com/fatty_corgi.jpg"
       alt="fatty corgi"
     />
   </div>,

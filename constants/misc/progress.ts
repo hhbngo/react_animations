@@ -2,7 +2,7 @@ import { Progress } from '@components/Misc';
 
 export default {
   component: Progress,
-  containerStyles: { width: 400 },
+  containerStyles: { width: '80%', maxWidth: 450 },
   code: `import c from './Progress.module.css';
 
 /** 
