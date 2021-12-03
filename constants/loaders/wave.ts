@@ -71,5 +71,6 @@ ReactDOM.render(
     transform: translateY(0px);
     background-color: #9b59b6;
   }
-}`,
+}
+`,
 };
