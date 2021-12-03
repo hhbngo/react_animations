@@ -39,38 +39,37 @@ ReactDOM.render(
 `,
   css: `.container {
   display: flex;
-  justify-content: space-between;
-  width: 64px;
+  gap: 10px;
 }
 
-.dot {
-  height: 14px;
-  width: 14px;
-  border-radius: 50%;
-  background-color: rgb(212, 212, 212);
-  transition: transform 0.5s;
-  animation: pulse 1s linear infinite;
+.bar {
+  width: 20px;
+  height: 20px;
+  background-color: #9b59b6;
+  border-radius: 5px;
+  animation: wave 1.5s ease-in-out infinite;
 }
 
-.delay_one {
-  animation-delay: 0.2s;
-}
-
-.delay_two {
-  animation-delay: 0.4s;
-}
-
-.delay_three {
-  animation-delay: 0.6s;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(0.42);
+@keyframes wave {
+  0% {
+    height: 20px;
+    transform: translateY(0px);
+    background-color: #9b59b6;
+  }
+  25% {
+    height: 90px;
+    transform: translateY(-40px);
+    background-color: #3498db;
   }
   50% {
-    transform: scale(1);
+    height: 20px;
+    transform: translateY(0px);
+    background-color: #9b59b6;
+  }
+  100% {
+    height: 20px;
+    transform: translateY(0px);
+    background-color: #9b59b6;
   }
 }`,
 };
