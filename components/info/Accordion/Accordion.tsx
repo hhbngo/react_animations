@@ -23,17 +23,17 @@ const DATA = [
   },
 ];
 
-const Accordion: FC & { panel: FC<PanelProps> } = () => {
+const Accordion: FC & { Panel: FC<PanelProps> } = () => {
   return (
     <div className={c.container}>
       {DATA.map(({ title, body }) => (
-        <Accordion.panel key={title} title={title} body={body} />
+        <Accordion.Panel key={title} title={title} body={body} />
       ))}
     </div>
   );
 };
 
-Accordion.panel = ({ title, body }) => {
+Accordion.Panel = ({ title, body }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const bodyHeight = useMemo((): number => {
