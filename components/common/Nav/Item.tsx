@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Item: FC<Props> = ({ main, subs, onClick }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(subs.length > 1 ? true : false);
 
   return (
     <div className={c.container}>
