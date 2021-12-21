@@ -2,6 +2,7 @@ import { CSSProperties, FC } from 'react';
 import { spinner, dots, wave } from './loaders';
 import { flip } from './cards';
 import { leftToRight, slices, bubble, actionIcon } from './buttons';
+import { accordion } from './info';
 import { zoomIn, zoomOut, hoverText } from './images';
 import { progress } from './misc';
 
@@ -27,6 +28,9 @@ export const DATA: Data = {
     actionIcon,
     slices,
     bubble,
+  },
+  info: {
+    accordion,
   },
   images: {
     zoomIn,
